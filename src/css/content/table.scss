@@ -1,0 +1,45 @@
+@import "src/css/media";
+.table-container {
+  width: 80%;
+  margin: 0 auto;
+  @include breakpoint(lg-max) {
+    width: 100%;
+  }
+
+  table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #030303;
+    text-align: center;
+    @include breakpoint(sm-max) {
+      font-size: 13px;
+    }
+
+
+    thead {
+      background-color: black;
+      color: white;
+      text-align: center;
+
+      th {
+        padding: 15px 0;
+      }
+    }
+
+    tbody {
+      tr:nth-child(2n) {
+        background-color: rgba(24, 24, 24, 0.4);
+      }
+
+      tr:hover {
+        background-color: rgba(171, 85, 31, 0.4);
+      }
+    }
+
+    tr, td {
+      border: 1px solid #030303;
+      padding: 10px 0;
+    }
+  }
+}

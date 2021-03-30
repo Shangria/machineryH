@@ -1,0 +1,46 @@
+section#gallery.gallery
+    .content-wrapper
+        .gallery__title-box
+            h3.gallery__title Photos of some of the machines that we did:
+            p.gallery__text Click on them to open in fullscreen
+        ul.gallery__container
+            -
+                machines = [
+                    {src: "img/img-s.jpg",  zoomUrl: "img/img-zoom/img-s-zoom.jpg", alt: "machinery", title:'D9T 2019 with C18 engine - DPF EGR DEF SCR delete.'},
+                    {src: "img/img2-s.jpg", zoomUrl: "img/img-zoom/img-s2-zoom.jpg", alt: "machinery", title:'CAT 374F with C15 engine - DPF EGR DEF SCR delete.'},
+                    {src: "img/img3-s.jpg", zoomUrl: "img/img-zoom/img-s3-zoom.jpg", alt: "machinery", title:'CAT 336F DPF EGR DEF SCR delete'},
+                    {src: "img/img4-s.jpg", zoomUrl: "img/img-zoom/img-s4-zoom.jpg", alt: "machinery", title:'CAT 627K with dual engine C13 & C9 - DPF EGR DEF SCR delete.'},
+                    {src: "img/img5-s.jpg", zoomUrl: "img/img-zoom/img-s5-zoom.jpg", alt: "machinery", title:'CAT 349F with C13 engine - DPF EGR DEF SCR delete.'},
+                    {src: "img/img6-s.jpg", zoomUrl: "img/img-zoom/img-s6-zoom.jpg", alt: "machinery", title:'CAT D6T with C9.3 engine - DPF EGR delete.'},
+                    {src: "img/img7-s.jpg", zoomUrl: "img/img-zoom/img-s7-zoom.jpg", alt: "machinery", title:'CAT 352F with C13 engine - DPF EGR DEF SCR delete.'},
+                    {src: "img/img8-s.jpg", zoomUrl: "img/img-zoom/img-s8-zoom.jpg", alt: "machinery", title:'CAT 980M with C13 engine - DPF EGR DEF SCR delete using original CAT migration kit.'},
+                    {src: "img/img9-s.jpg", zoomUrl: "img/img-zoom/img-s9-zoom.jpg", alt: "machinery", title:'CAT 430F with C4.4 engine - DPF EGR delete!'},
+                    {src: "img/img10-s.jpg", zoomUrl: "img/img-zoom/img-s10-zoom.jpg", alt: "machinery", title:'CAT D8T with C15 engine - DPF EGR DEF SCR delete.'},
+                    {src: "img/img11-s.jpg", zoomUrl: "img/img-zoom/img-s11-zoom.jpg", alt: "machinery", title:'CAT skidder 535D with C7.1 engine - DPF EGR DEF delete tuning.'},
+                    {src: "img/img12-s.jpg", zoomUrl: "img/img-zoom/img-s12-zoom.jpg", alt: "machinery", title:'CAT 349E with C13 engine - DPF delete using CAT migration kit.'},
+                    {src: "img/img13-s.jpg", zoomUrl: "img/img-zoom/img-s13-zoom.jpg", alt: "machinery", title:'CAT 730C Off-highway truck with C13 engine - DPF EGR DEF SCR delete.'},
+                    {src: "img/img14-s.jpg", zoomUrl: "img/img-zoom/img-s14-zoom.jpg", alt: "machinery", title:'CAT 963K track loader with C7.1 engine - DPF EGR DEF SCR delete.'},
+                    {src: "img/img15-s.jpg", zoomUrl: "img/img-zoom/img-s15-zoom.jpg", alt: "machinery", title:'CAT 740B with C15 engine - DPF delete.'},
+                    {src: "img/img16-s.jpg", zoomUrl: "img/img-zoom/img-s16-zoom.jpg", alt: "machinery", title:'CAT D7E with C13 engine - DPF EGR DEF SCR delete.'},
+                    {src: "img/img17-s.jpg", zoomUrl: "img/img-zoom/img-s17-zoom.jpg", alt: "machinery", title:'CAT D6N with C6.6 engine - DPF EGR delete.'},
+                    {src: "img/img18-s.jpg", zoomUrl: "img/img-zoom/img-s18-zoom.jpg", alt: "machinery", title:'KPI-JCI crusher with CAT C13 KWJ industrial engine. DPF delete.'},
+                    {src: "img/img19-s.jpg", zoomUrl:"img/img-zoom/img-s19-zoom.jpg", alt: "machinery", title:'CAT 982M with C13 engine - DPF EGR DEF SCR delete.'},
+                    {src: "img/img20-s.jpg", zoomUrl: "img/img-zoom/img-s20-zoom.jpg", alt: "machinery", title:'CAT 926M with C7.1 engine - DPF EGR DEF SCR delete.'},
+                    {src: "img/img21-s.jpg", zoomUrl: "img/img-zoom/img-s21-zoom.jpg", alt: "machinery", title:'CAT 573C Wheel Feller Bunchers with C7.1 engine - DPF EGR delete.'},
+                    {src: "img/img22-s.jpg", zoomUrl: "img/img-zoom/img-s22-zoom.jpg", alt: "machinery", title:'CAT 980K - DPF EGR delete.'},
+                ];
+
+            each element in machines
+                li.gallery__col
+                    .gallery__img-wrapper
+                        img.gallery__img(src=element.src, alt=element.title, data-gallery-image, data-gallery-image-zoom-src=element.zoomUrl, data-gallery-image-alt=element.alt)
+                    .gallery__box
+                        p=element.title
+        .gallery__btn#pagination-container
+        p.gallery__text
+            | * All product are intended for off-road use in competition only, and are not to be used on public roads or highways.
+            | We don't take any responsibility where & how will You use the ECM, or will You or will You not remove the DPF-EGR-SCR-DEF from vehicle.
+            a(href='#')  Click here
+            |  to see the disclaimer & warranty terms.
+
+

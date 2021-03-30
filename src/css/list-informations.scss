@@ -1,0 +1,59 @@
+@import "variable-style";
+@import "src/css/media";
+
+.list-information-wrapper {
+  @include list-inform;
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    display: block;
+  }
+
+  &__box {
+    @include box-inform;
+    @include breakpoint(lg-maxL) {
+      margin: 0 auto;
+    }
+    @include breakpoint(md-max) {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__list-container {
+    @include container-inform;
+    margin: 0 20px 20px;
+    @include breakpoint(mobile320-min) {
+      width: 100%;
+    }
+    @include breakpoint(lg-maxL ) {
+      width: 100%;
+    }
+
+
+    &:hover {
+      background-color: rgba(0, 0, 0, .1);
+    }
+  }
+
+  &__icon-border {
+    font-size: 5rem;
+    color: $color-bg-main;
+    padding-bottom: 10px;
+    @include breakpoint(lg-maxL) {
+      font-size: 3rem;
+    }
+  }
+
+  &__all-inform {
+    padding-left: 15px;
+  }
+
+  &__title {
+    font-size: $font-size-main;
+    padding-top: 15px;
+    width: 100%;
+    @include breakpoint(lg-maxL) {
+      font-size: $font-size;
+    }
+  }
+}

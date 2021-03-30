@@ -1,0 +1,38 @@
+@import "src/css/variable-style";
+@import "src/css/media";
+
+.accordion {
+  padding: 0 15px;
+
+  &-item {
+    background-color: $color-bg-main;
+  }
+
+  &-button {
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+
+    @include breakpoint(md-max) {
+      font-size: 18px;
+    }
+    @include breakpoint(sm-max) {
+      font-size: 16px;
+    }
+
+    &:not(.collapsed) {
+      background-color: rgba(0, 0, 0, 0.3);
+      color: black;
+    }
+
+    &:not(.collapsed)::after {
+      background-image: none;
+      content: '\2014';
+      color: black;
+      font-size: 25px;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}

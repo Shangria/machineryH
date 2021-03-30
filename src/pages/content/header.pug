@@ -1,0 +1,39 @@
+section.header.header.fixed-top
+    .container-sm.container-wrapper
+        nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+            a.navbar-brand(href='#')
+                img(src='./img/logo.jpg' alt='logo')
+            button.navbar-toggler.collapsed(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+            #navbarSupportedContent.collapse.navbar-collapse.mt-auto
+                ul.navbar-nav.ml-auto
+                    li.nav-item.active
+                        a.nav-link(href='#') Home
+                            span.sr-only
+                    li.nav-item.hover-dropdown
+                        a(class='nav-link hover-dropdown__toggle' href='#')
+                            | Select brand
+                            span &#9660;
+                        ul(class='hover-dropdown__menu hover-dropdown__menu--brand')
+                            li(class='hover-dropdown__item')
+                                a(href='#') Caterpillar
+                            li(class='hover-dropdown__item')
+                                a(href='#') Cummins
+                            li(class='hover-dropdown__item')
+                                a(href='#') Hyundai
+                            li(class='hover-dropdown__item')
+                                a(href='#') John Deere
+                            li(class='hover-dropdown__item')
+                                a(href='#') Komatsu
+                            li(class='hover-dropdown__item')
+                                a(href='#') Perkins
+                            li(class='hover-dropdown__item')
+                                a(href='#') Volvo
+                            li(class='hover-dropdown__item')
+                                a(href='#') Versatile
+                    li.nav-item
+                        a.nav-link(href='#') How we do it?
+                    li.nav-item
+                        a.nav-link(href='#') Disclaimer & warranty
+                    li.nav-item
+                        a.nav-link(href='#') Contact&nbsp;Us

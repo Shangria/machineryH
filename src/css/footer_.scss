@@ -1,0 +1,107 @@
+@import "variable-style";
+@import "media";
+
+.footer {
+  // background-color: $color-main;
+  background-image: url(../img/bg-img.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  margin: 0;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    opacity: 0.2;
+    background-color: $color-main;
+  }
+
+  &__top {
+    color: $color-text;
+    margin-top: 20px;
+    z-index: 1;
+    margin-bottom: 20px;
+
+    @include sm-min {
+      margin-bottom: 60px;
+    }
+
+    a {
+      border: 2px solid $color-text;
+      color: $color-text;
+
+      span {
+        margin-left: 25px;
+      }
+    }
+  }
+
+  &__bottom {
+    z-index: 1;
+
+  }
+
+  &__navbar {
+    padding: 0;
+
+    .container-fluid {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &_container {
+      padding: 0;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      text-align: center;
+      @include sm-min {
+        margin: 0;
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+  }
+
+  &__list-item {
+    margin-right: 1rem;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: $color-text;
+    }
+  }
+
+  &__link {
+    color: $color-text;
+    padding: 0 1rem;
+    margin: 0.5rem 0;
+    font-size: 0.75rem;
+    transition: all 0.2s;
+
+    @include md-min {
+      font-size: 0.875rem;
+    }
+
+    &:hover {
+      color: $color-main;
+    }
+  }
+
+  &__copyright {
+    color: $color-text;
+    opacity: 0.5;
+    text-align: center;
+    font-size: 0.75rem;
+
+    @include md-min {
+      text-align: right;
+    }
+  }
+}
+

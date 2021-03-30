@@ -1,0 +1,50 @@
+$max-width: 1170px;
+$main-padding: 0 15px;
+
+//fonts variables
+$font-main: 'Roboto', sans-serif;
+$font-size: 16px;
+$font-size-main: 18px;
+
+//size-variables
+$ul: 2560px;
+$xl: 1440px;
+$lg: 1025px;
+$md: 769px;
+$sm: 425px;
+// $content-container: 800px;
+
+//color-variables
+$color-main: #000000;
+$color-bg-main: #ffcc00;
+$color-accent: #FF9901;
+$color-text: #FFFFFF;
+
+.content-wrapper {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@mixin list-inform {
+  font-family: $font-main;
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+  text-align: center;
+}
+
+@mixin box-inform {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin container-inform {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, .1);
+  border-radius: 10px;
+}

@@ -1,0 +1,73 @@
+@import "src/css/variable-style";
+@import "src/css/media";
+
+.content {
+  &__container {
+    @include list-inform;
+    flex-direction: column;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  &__information {
+    @include box-inform;
+    margin: 0 auto;
+    @include breakpoint(lg-maxL) {
+      margin: 0 auto;
+    }
+    @include breakpoint(md-max) {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__accordion {
+    @include breakpoint(md-max) {
+      font-size: $font-size;
+    }
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      width: 90%;
+    }
+  }
+
+  &__box-accordion {
+    background-color: $color-bg-main;
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+  }
+
+  &__title {
+    padding: 10px;
+    text-align: center;
+  }
+
+  &__date {
+    font-style: italic;
+    padding-bottom: 20px;
+  }
+
+  &__text {
+    p {
+      width: 100%;
+    }
+    @include container-inform;
+    margin: 0 20px 20px;
+    @include breakpoint(mobile320-min) {
+      width: 100%;
+    }
+    @include breakpoint(lg-maxL ) {
+      width: 100%;
+    }
+
+    @include container-inform;
+    @include breakpoint(md-max) {
+      font-size: $font-size;
+    }
+  }
+}

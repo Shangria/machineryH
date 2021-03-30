@@ -1,0 +1,23 @@
+@import "media";
+@import "variable-style";
+
+.carousel-wrapper{
+  padding: 60px 0;
+  width: 100%;
+  @include breakpoint(lg-maxL) {
+    padding: 0;
+  }
+  &__container{
+    @include breakpoint(lg-maxL) {
+      width: 100%;
+    }
+  }
+  &-inner{
+    border-radius: 10px
+  }
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon{
+    width: 100px;
+    height: 100px;
+  }
+}

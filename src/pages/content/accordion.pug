@@ -1,0 +1,31 @@
+#accordionFlushExample.accordion.accordion-flush
+    .accordion-item
+        h2#flush-headingOne.accordion-header
+            button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseOne' aria-expanded='false' aria-controls='flush-collapseOne')
+                | Machines with C9.3, C13, C15, C18, C27, C32 engines
+        #flush-collapseOne.accordion-collapse.collapse(aria-labelledby='flush-headingOne' data-bs-parent='#accordionFlushExample')
+            .accordion-body
+                include table- C93-C13
+    .accordion-item
+        h2#flush-headingTwo.accordion-header
+            button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseTwo' aria-expanded='false' aria-controls='flush-collapseTwo')
+                | Machines with C7.1, C6.6, C4.4 engines
+        #flush-collapseTwo.accordion-collapse.collapse(aria-labelledby='flush-headingTwo' data-bs-parent='#accordionFlushExample')
+            .accordion-body
+                include table-C71
+    .accordion-item
+        h2#flush-headingThree.accordion-header
+            button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseThree' aria-expanded='false' aria-controls='flush-collapseThree')
+                | Additional information
+        #flush-collapseThree.accordion-collapse.collapse(aria-labelledby='flush-headingOne' data-bs-parent='#accordionFlushExample')
+            .accordion-body
+                | Additional information
+    .accordion-item
+        h2#flush-headingFour.accordion-header
+            button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseFour' aria-expanded='false' aria-controls='flush-collapseFour')
+                | Additional information
+        #flush-collapseFour.accordion-collapse.collapse(aria-labelledby='flush-headingOne' data-bs-parent='#accordionFlushExample')
+            .accordion-body
+                | Additional information
+
+

@@ -1,0 +1,9 @@
+section.list-information-wrapper
+            .content-wrapper
+                .list-information-wrapper__box
+                    -
+                        arrListInformation = [{p: 'This way You are getting original CAT delete tuning - the best thing money can buy!',i:'fa fa-thumbs-up'}, {p: 'All CAT machinery/industrial engine/agricultural equipment ECM tuning is done online.',i:'fa fa-phone'}, {p: 'We use official CAT decertification files (migration kit), intended for vehicles that get exported to non regulated countries(NRC)!',i:'fa fa-file'}]
+                    each element in arrListInformation
+                        .list-information-wrapper__list-container
+                            i(class='' + element.i).list-information-wrapper__icon-border
+                            p.list-information-wrapper__title= element.p
